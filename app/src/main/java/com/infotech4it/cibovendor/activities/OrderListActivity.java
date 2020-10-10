@@ -14,8 +14,10 @@ import com.infotech4it.cibovendor.fragments.AcceptedFragment;
 import com.infotech4it.cibovendor.fragments.CompletedFragment;
 import com.infotech4it.cibovendor.fragments.PendingFragment;
 import com.infotech4it.cibovendor.fragments.RejectedFragment;
+import com.infotech4it.cibovendor.helpers.UIHelper;
+import com.infotech4it.cibovendor.interfaces.OrderInterface;
 
-public class OrderListActivity extends AppCompatActivity {
+public class OrderListActivity extends AppCompatActivity implements OrderInterface {
     private ActivityOrderListBinding binding;
     private PendingFragment pendingFragment = new PendingFragment();
     private AcceptedFragment acceptedFragment = new AcceptedFragment();
@@ -84,5 +86,10 @@ public class OrderListActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = ((AppCompatActivity) context).getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(id, fragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onOrderItemClick(String orderID) {
+        UIHelper.openActivity(this, OrderDetailActivity.class);
     }
 }

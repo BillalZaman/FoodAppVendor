@@ -11,6 +11,6 @@
     <color name="white">#fff</color>
 
     <color name="pending_color">#F4CD00</color>
-    <color name="accepted_color">#F4CD00</color>
+    <color name="accepted_color">#0B701C</color>
     <color name="completed_color">#F4CD00</color>
 </resources>

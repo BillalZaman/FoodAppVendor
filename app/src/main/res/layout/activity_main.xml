@@ -13,7 +13,8 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -65,11 +66,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="@color/red"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/tab"
+                android:fontFamily="@font/poppins_semibold"
                 android:gravity="center"
                 android:padding="50dp"
-                android:text="TextView"
+                android:text="Pending Order"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textmedium"
                 app:layout_constraintEnd_toStartOf="@+id/txtOrderAccepted"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,27 +84,36 @@
             <TextView
                 android:id="@+id/txtOrderAccepted"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@color/red"
+                android:layout_height="0dp"
+                android:background="@color/tab"
+                android:fontFamily="@font/poppins_semibold"
                 android:gravity="center"
                 android:padding="50dp"
-                android:text="TextView"
+                android:text="Accepted Order"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textmedium"
+                app:layout_constraintBottom_toBottomOf="@+id/txtTotalOrder"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/txtTotalOrder"
-                app:layout_constraintTop_toBottomOf="@+id/tab" />
+                app:layout_constraintTop_toTopOf="@+id/txtTotalOrder" />
 
             <TextView
                 android:id="@+id/txtOrderRejected"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@color/red"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/tab"
+                android:fontFamily="@font/poppins_semibold"
                 android:gravity="center"
                 android:padding="50dp"
-                android:text="TextView"
+                android:text="Completed Order"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textmedium"
                 app:layout_constraintEnd_toStartOf="@+id/txtPendingOrders"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -107,16 +122,21 @@
             <TextView
                 android:id="@+id/txtPendingOrders"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@color/red"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/tab"
+                android:fontFamily="@font/poppins_semibold"
                 android:gravity="center"
                 android:padding="50dp"
-                android:text="TextView"
+                android:text="Rejected Order"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textmedium"
+                app:layout_constraintBottom_toBottomOf="@+id/txtOrderRejected"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/txtOrderRejected"
-                app:layout_constraintTop_toBottomOf="@+id/txtOrderAccepted" />
+                app:layout_constraintTop_toBottomOf="@+id/txtTotalOrder" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <fragment

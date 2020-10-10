@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements FragmentNavigatio
         fragmentNavigationDrawer.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
         fragmentNavigationDrawer.setDrawerListener(this);
 
-        displayView(0);
     }
 
     public void onClick(View view){
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements FragmentNavigatio
         switch (position) {
             case 0: {
                 // Order Tracking
-                UIHelper.openActivity(MainActivity.this, OrderListActivity.class);
                 break;
             }
             case 1: {
