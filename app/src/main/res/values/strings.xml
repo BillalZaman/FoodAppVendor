@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CiboVendor</string>
+
+    <string name="order_tracking">Order Tracking</string>
+    <string name="add_menu">Menu</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="version">Version 1.0</string>
+
+    <string-array name="nav_drawer_labels">
+        <item>@string/order_tracking</item>
+        <item>@string/add_menu</item>
+        <item>@string/change_password</item>
+        <item>@string/logout</item>
+    </string-array>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="pending">Pending</string>
+    <string name="accepted">Accepted</string>
+    <string name="completed">Completed</string>
+    <string name="rejected">Rejected</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
